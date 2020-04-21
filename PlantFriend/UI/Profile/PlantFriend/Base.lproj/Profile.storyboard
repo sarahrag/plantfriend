@@ -56,12 +56,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlantDefaultColor" translatesAutoresizingMaskIntoConstraints="NO" id="oNy-N0-6Ok">
-                                                    <rect key="frame" x="10" y="0.0" width="84" height="105"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="105"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="102" height="124"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="5De-QO-5Gc" id="DqC-Ry-iRM"/>
                                             <outlet property="plantImageView" destination="oNy-N0-6Ok" id="goK-t1-keY"/>
