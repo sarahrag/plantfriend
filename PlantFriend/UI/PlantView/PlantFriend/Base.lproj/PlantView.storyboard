@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M7p-Ha-pZh">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rOo-L0-TDp">
+            <objects>
+                <navigationController id="M7p-Ha-pZh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="89c-oR-1xA">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O5R-No-ef1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sz-S3-wQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-480" y="76"/>
+        </scene>
+        <!--Deine Pflanzen 🌿-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlantViewController" customModule="PlantFriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gyo-Nv-9H3">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="plantCell" rowHeight="122" id="pCp-1R-Zjj" customClass="UIPlantTableViewCell" customModule="PlantFriend" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="122"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pCp-1R-Zjj" id="zFB-FM-zEm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlantDefaultColor" translatesAutoresizingMaskIntoConstraints="NO" id="cSH-Yd-tVB">
+                                                    <rect key="frame" x="15" y="13" width="90" height="97"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="K4L-bi-jZT"/>
+                                                        <constraint firstAttribute="width" secondItem="cSH-Yd-tVB" secondAttribute="height" multiplier="90:97" id="NwA-uD-83Y"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlantName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bQ-46-6Gk" customClass="UIUpperCase" customModule="PlantFriend" customModuleProvider="target">
+                                                    <rect key="frame" x="126" y="21" width="78" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="upperCase" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ6-MW-5wQ">
+                                                    <rect key="frame" x="309" y="41" width="41" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="o7a-tQ-dRT"/>
+                                                        <constraint firstAttribute="width" secondItem="UZ6-MW-5wQ" secondAttribute="height" multiplier="41:40" id="w5O-rL-HM5"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Watered" image="WaterIcon"/>
+                                                    <connections>
+                                                        <action selector="wateredButton:" destination="pCp-1R-Zjj" eventType="touchUpInside" id="uZv-4z-fCh"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WaterLabel" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-id-QcH">
+                                                    <rect key="frame" x="126" y="83" width="78" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UZ6-MW-5wQ" secondAttribute="trailing" constant="10" id="2I1-hw-v3E"/>
+                                                <constraint firstItem="UZ6-MW-5wQ" firstAttribute="top" secondItem="zFB-FM-zEm" secondAttribute="topMargin" constant="30" id="4Q8-Tv-QCt"/>
+                                                <constraint firstItem="5bQ-46-6Gk" firstAttribute="leading" secondItem="cSH-Yd-tVB" secondAttribute="trailing" constant="21" id="AsY-fR-yCL"/>
+                                                <constraint firstItem="cSH-Yd-tVB" firstAttribute="top" secondItem="zFB-FM-zEm" secondAttribute="topMargin" constant="2" id="EGC-UY-HSD"/>
+                                                <constraint firstItem="Vc7-id-QcH" firstAttribute="leading" secondItem="5bQ-46-6Gk" secondAttribute="leading" id="Jnm-Sm-mEa"/>
+                                                <constraint firstItem="UZ6-MW-5wQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vc7-id-QcH" secondAttribute="trailing" constant="10" id="Oqy-Xd-x4D"/>
+                                                <constraint firstItem="5bQ-46-6Gk" firstAttribute="top" secondItem="zFB-FM-zEm" secondAttribute="topMargin" constant="10" id="RpO-th-MNb"/>
+                                                <constraint firstItem="Vc7-id-QcH" firstAttribute="trailing" secondItem="5bQ-46-6Gk" secondAttribute="trailing" id="cvV-ry-dso"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cSH-Yd-tVB" secondAttribute="bottom" constant="1" id="qsw-GU-gPj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UZ6-MW-5wQ" secondAttribute="bottom" constant="30" id="rg3-eY-2w0"/>
+                                                <constraint firstItem="cSH-Yd-tVB" firstAttribute="leading" secondItem="zFB-FM-zEm" secondAttribute="leadingMargin" id="rvT-PQ-s8c"/>
+                                                <constraint firstItem="Vc7-id-QcH" firstAttribute="bottom" secondItem="zFB-FM-zEm" secondAttribute="bottomMargin" constant="-10" id="yTe-bI-Ur8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="PlantNameLabel" destination="5bQ-46-6Gk" id="Swk-vZ-1Vk"/>
+                                            <outlet property="WaterLabel" destination="Vc7-id-QcH" id="GtO-Gr-WNi"/>
+                                            <outlet property="plantImageView" destination="cSH-Yd-tVB" id="L0K-DZ-4ki"/>
+                                            <outlet property="watered" destination="UZ6-MW-5wQ" id="bcB-kz-Lnj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Tuy-Wu-eK1">
+                                <rect key="frame" x="35" y="241" width="305" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="noPlantsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8vB-Ue-YwB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tuy-Wu-eK1" firstAttribute="centerX" secondItem="gyo-Nv-9H3" secondAttribute="centerX" id="3Px-gQ-14R"/>
+                            <constraint firstItem="Tuy-Wu-eK1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="3um-D4-KTu"/>
+                            <constraint firstItem="gyo-Nv-9H3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A5h-wH-fUv"/>
+                            <constraint firstItem="gyo-Nv-9H3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Cze-EA-zWO"/>
+                            <constraint firstItem="Tuy-Wu-eK1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="153" id="JLa-7L-TBk"/>
+                            <constraint firstItem="Tuy-Wu-eK1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bvg-Tz-YSn"/>
+                            <constraint firstItem="gyo-Nv-9H3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="haQ-BV-5jM"/>
+                            <constraint firstItem="Tuy-Wu-eK1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q5X-Fi-z3Q"/>
+                            <constraint firstItem="gyo-Nv-9H3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wmH-bx-Dky"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Plants" image="PlantIcon" selectedImage="PlantIcon" id="8vy-hC-kDF">
+                        <inset key="imageInsets" minX="0.0" minY="118" maxX="0.0" maxY="105"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="14"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Deine Pflanzen 🌿" largeTitleDisplayMode="always" id="Xcz-X9-JWV"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="PlantTable" destination="gyo-Nv-9H3" id="csI-Qz-fg8"/>
+                        <outlet property="noPlants" destination="Tuy-Wu-eK1" id="aem-ut-5ns"/>
+                        <segue destination="Ftg-Mc-exs" kind="show" identifier="createProfileSengue" id="f6x-Ok-jxu"/>
+                        <segue destination="181-XG-XTY" kind="show" identifier="plantDetailSegue" id="i8T-An-ruq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292.75362318840581" y="75.669642857142847"/>
+        </scene>
+        <!--PlantDetailView-->
+        <scene sceneID="kFr-Dq-uxf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlantDetailView" id="181-XG-XTY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="p1f-I6-fYA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgg-Yg-Ga0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="51"/>
+        </scene>
+        <!--CreateNewProfile-->
+        <scene sceneID="x4u-xY-Eel">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateNewProfile" id="Ftg-Mc-exs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cuw-zt-6md"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p62-3t-AYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="187"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlantDefaultColor" width="256" height="256"/>
+        <image name="PlantIcon" width="256" height="256"/>
+        <image name="WaterIcon" width="256" height="256"/>
+    </resources>
+</document>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Person" representedClassName=".Person" syncable="YES" codeGenerationType="category">
+        <attribute name="name" optional="YES" attributeType="String" minValueString="1"/>
+        <attribute name="profilePic" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="plant" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Plant" inverseName="person" inverseEntity="Plant"/>
+    </entity>
+    <entity name="Plant" representedClassName=".Plant" syncable="YES" codeGenerationType="category">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" minValueString="1"/>
+        <attribute name="waterDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="waterInterval" optional="YES" attributeType="Integer 32" minValueString="1" defaultValueString="7" usesScalarValueType="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="plant" inverseEntity="Person"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-54" positionY="9" width="128" height="88"/>
+        <element name="Plant" positionX="-63" positionY="-18" width="128" height="118"/>
+    </elements>
+</model>

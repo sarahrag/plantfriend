@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xKH-Xk-Y3Q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hdh-oN-epN">
+            <objects>
+                <navigationController id="xKH-Xk-Y3Q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BMD-ZR-Vrh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bZ1-bq-nDB" kind="relationship" relationship="rootViewController" id="1WK-7R-cMV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vc-h0-jxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2275" y="719"/>
+        </scene>
+        <!--Pflanze hinzufügen 🌿-->
+        <scene sceneID="pav-Cq-hET">
+            <objects>
+                <viewController id="bZ1-bq-nDB" customClass="AddPlantViewController" customModule="PlantFriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kek-HV-sWg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAw-B9-Rdu">
+                                <rect key="frame" x="139" y="726" width="136" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="GSy-ae-i6s"/>
+                                </constraints>
+                                <state key="normal" title="Hinzufügen">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPlant:" destination="bZ1-bq-nDB" eventType="touchUpInside" id="BWu-8f-efZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zuletzt gegossen am:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qct-bq-xOg">
+                                <rect key="frame" x="41" y="307" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gießintervall: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8k-1Q-W19">
+                                <rect key="frame" x="40" y="581" width="105" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="YYt-5z-QIQ">
+                                <rect key="frame" x="253" y="106" width="124" height="114"/>
+                                <color key="tintColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fe9-KE-5cf">
+                                <rect key="frame" x="48" y="325" width="320" height="218"/>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="bZ1-bq-nDB" eventType="valueChanged" id="iWn-Zc-JDJ"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSi-93-BL4">
+                                <rect key="frame" x="338" y="582" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1X-Kn-n28">
+                                <rect key="frame" x="253" y="575" width="77" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-1Z-mOK">
+                                <rect key="frame" x="31" y="137" width="184" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="pKp-Nl-Cu4"/>
+                                </constraints>
+                                <color key="textColor" systemColor="quaternaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="textFieldChanges:" destination="bZ1-bq-nDB" eventType="editingChanged" id="9JS-9h-lc5"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTt-Jf-Xy3">
+                                <rect key="frame" x="31" y="179" width="184" height="30"/>
+                                <state key="normal" title="Pflanzenname?">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="plantNameButton:" destination="bZ1-bq-nDB" eventType="touchUpInside" id="Qwj-3U-9K1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gießempfehlung" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbp-zb-c1M" customClass="UIColorLabel" customModule="PlantFriend" customModuleProvider="target">
+                                <rect key="frame" x="244" y="630" width="141" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="recommendation" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.94117647058823528" green="0.95686274509803915" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHM-SN-53a">
+                                <rect key="frame" x="245" y="99" width="140" height="129"/>
+                                <state key="normal" title="Bild hinzufügen">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImage:" destination="bZ1-bq-nDB" eventType="touchUpInside" id="cwu-Rb-yQZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="hSi-93-BL4" firstAttribute="leading" secondItem="u1X-Kn-n28" secondAttribute="trailing" constant="8" id="0av-pW-69H"/>
+                            <constraint firstItem="YYt-5z-QIQ" firstAttribute="bottom" secondItem="mHM-SN-53a" secondAttribute="bottom" constant="-8" id="4OL-ua-IlD"/>
+                            <constraint firstItem="YAw-B9-Rdu" firstAttribute="leading" secondItem="WIu-Ng-a6o" secondAttribute="leading" constant="139" id="4QJ-xS-qwk"/>
+                            <constraint firstItem="WIu-Ng-a6o" firstAttribute="trailing" secondItem="Sbp-zb-c1M" secondAttribute="trailing" constant="29" id="8E6-Ji-XrK"/>
+                            <constraint firstItem="YYt-5z-QIQ" firstAttribute="top" secondItem="WIu-Ng-a6o" secondAttribute="top" constant="18" id="98Q-Lg-T99"/>
+                            <constraint firstItem="WIu-Ng-a6o" firstAttribute="bottom" secondItem="YAw-B9-Rdu" secondAttribute="bottom" constant="44" id="99u-9C-xnA"/>
+                            <constraint firstItem="YAw-B9-Rdu" firstAttribute="centerX" secondItem="fe9-KE-5cf" secondAttribute="centerX" constant="-1" id="ErR-Lx-Rck"/>
+                            <constraint firstItem="B8k-1Q-W19" firstAttribute="top" secondItem="fe9-KE-5cf" secondAttribute="bottom" constant="38" id="LRJ-dN-xDA"/>
+                            <constraint firstItem="u1X-Kn-n28" firstAttribute="leading" secondItem="B8k-1Q-W19" secondAttribute="trailing" constant="108" id="Lqw-Zh-pHX"/>
+                            <constraint firstItem="YAw-B9-Rdu" firstAttribute="centerX" secondItem="TJ5-1Z-mOK" secondAttribute="centerX" constant="84" id="MOc-FC-tXt"/>
+                            <constraint firstItem="QTt-Jf-Xy3" firstAttribute="leading" secondItem="TJ5-1Z-mOK" secondAttribute="leading" id="MbN-1r-alB"/>
+                            <constraint firstItem="mHM-SN-53a" firstAttribute="leading" secondItem="TJ5-1Z-mOK" secondAttribute="trailing" constant="30" id="NU9-wf-pJ5"/>
+                            <constraint firstItem="YAw-B9-Rdu" firstAttribute="top" secondItem="Sbp-zb-c1M" secondAttribute="bottom" constant="66" id="Nam-m2-jhE"/>
+                            <constraint firstItem="hSi-93-BL4" firstAttribute="top" secondItem="fe9-KE-5cf" secondAttribute="bottom" constant="39" id="On5-VU-cIM"/>
+                            <constraint firstItem="qct-bq-xOg" firstAttribute="leading" secondItem="WIu-Ng-a6o" secondAttribute="leading" constant="41" id="QAl-4e-XT1"/>
+                            <constraint firstItem="TJ5-1Z-mOK" firstAttribute="top" secondItem="YYt-5z-QIQ" secondAttribute="bottom" constant="-83" id="Tgp-YU-dgY"/>
+                            <constraint firstItem="u1X-Kn-n28" firstAttribute="top" secondItem="fe9-KE-5cf" secondAttribute="bottom" constant="32" id="VLn-V0-AZ7"/>
+                            <constraint firstItem="TJ5-1Z-mOK" firstAttribute="leading" secondItem="WIu-Ng-a6o" secondAttribute="leading" constant="31" id="Vlk-S6-LTF"/>
+                            <constraint firstItem="B8k-1Q-W19" firstAttribute="centerY" secondItem="u1X-Kn-n28" secondAttribute="centerY" constant="1" id="YOk-eO-DsM"/>
+                            <constraint firstItem="WIu-Ng-a6o" firstAttribute="trailing" secondItem="hSi-93-BL4" secondAttribute="trailing" constant="39" id="bAN-AN-CiY"/>
+                            <constraint firstItem="YYt-5z-QIQ" firstAttribute="leading" secondItem="TJ5-1Z-mOK" secondAttribute="trailing" constant="38" id="beW-zb-JvJ"/>
+                            <constraint firstItem="B8k-1Q-W19" firstAttribute="baseline" secondItem="u1X-Kn-n28" secondAttribute="baseline" constant="2" id="dsu-wI-O75"/>
+                            <constraint firstItem="QTt-Jf-Xy3" firstAttribute="trailing" secondItem="TJ5-1Z-mOK" secondAttribute="trailing" id="f5S-2s-dN5"/>
+                            <constraint firstItem="QTt-Jf-Xy3" firstAttribute="top" secondItem="TJ5-1Z-mOK" secondAttribute="bottom" constant="8" id="fLe-qH-q5q"/>
+                            <constraint firstItem="qct-bq-xOg" firstAttribute="top" secondItem="TJ5-1Z-mOK" secondAttribute="bottom" constant="136" id="joo-Ib-8cY"/>
+                            <constraint firstItem="B8k-1Q-W19" firstAttribute="leading" secondItem="WIu-Ng-a6o" secondAttribute="leading" constant="40" id="rte-Pb-3KR"/>
+                            <constraint firstItem="WIu-Ng-a6o" firstAttribute="trailing" secondItem="YYt-5z-QIQ" secondAttribute="trailing" constant="37" id="sGL-eK-g0c"/>
+                            <constraint firstItem="fe9-KE-5cf" firstAttribute="centerY" secondItem="Kek-HV-sWg" secondAttribute="centerY" constant="-14" id="wy2-pq-Y2u"/>
+                            <constraint firstItem="WIu-Ng-a6o" firstAttribute="bottom" secondItem="hSi-93-BL4" secondAttribute="bottom" constant="210" id="xFI-jC-z51"/>
+                            <constraint firstItem="fe9-KE-5cf" firstAttribute="top" secondItem="TJ5-1Z-mOK" secondAttribute="bottom" constant="154" id="xPM-yb-4wf"/>
+                            <constraint firstItem="WIu-Ng-a6o" firstAttribute="trailing" secondItem="TJ5-1Z-mOK" secondAttribute="trailing" constant="199" id="xRv-NB-BX7"/>
+                            <constraint firstItem="mHM-SN-53a" firstAttribute="top" secondItem="WIu-Ng-a6o" secondAttribute="top" constant="11" id="xhO-h9-z0U"/>
+                            <constraint firstItem="Sbp-zb-c1M" firstAttribute="top" secondItem="u1X-Kn-n28" secondAttribute="bottom" constant="22" id="xtr-Lj-DLH"/>
+                            <constraint firstItem="u1X-Kn-n28" firstAttribute="centerY" secondItem="hSi-93-BL4" secondAttribute="centerY" constant="-1" id="yBV-qt-kT1"/>
+                            <constraint firstItem="WIu-Ng-a6o" firstAttribute="trailing" secondItem="mHM-SN-53a" secondAttribute="trailing" constant="29" id="zG2-SC-ml9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WIu-Ng-a6o"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VGs-fa-I05" appends="YES" id="jFP-rh-vCR"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Plant" image="PlusIcon" selectedImage="PlusIcon" id="iNH-qS-Bdb">
+                        <inset key="imageInsets" minX="0.0" minY="117" maxX="0.0" maxY="105"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="15"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Pflanze hinzufügen 🌿" id="kHS-6D-mTB"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="datePicker" destination="fe9-KE-5cf" id="Yql-VR-5GP"/>
+                        <outlet property="nameTextField" destination="TJ5-1Z-mOK" id="fzE-3Z-Plm"/>
+                        <outlet property="plantImageView" destination="YYt-5z-QIQ" id="KTY-PN-WLt"/>
+                        <outlet property="plantName" destination="QTt-Jf-Xy3" id="8KX-ur-AnL"/>
+                        <outlet property="waterIntervallTextField" destination="u1X-Kn-n28" id="zcr-DG-SWP"/>
+                        <outlet property="waterReference" destination="Sbp-zb-c1M" id="zbT-ZL-jsa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PL8-MC-uBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VGs-fa-I05">
+                    <connections>
+                        <action selector="tabGesture:" destination="bZ1-bq-nDB" id="l8o-rG-It2"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1049.2753623188407" y="677.67857142857144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CameraIcon" width="256" height="256"/>
+        <image name="PlusIcon" width="256" height="256"/>
+    </resources>
+</document>

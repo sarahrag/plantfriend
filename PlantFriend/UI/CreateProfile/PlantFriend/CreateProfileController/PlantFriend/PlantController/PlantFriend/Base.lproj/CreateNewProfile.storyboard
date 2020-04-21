@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BSP-iV-hHR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Profile View Controller-->
+        <scene sceneID="Bo0-r4-uh4">
+            <objects>
+                <viewController id="BSP-iV-hHR" customClass="CreateProfileViewController" customModule="PlantFriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E9R-vp-i8b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wie heißt du?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWt-SF-o35">
+                                <rect key="frame" x="46" y="227" width="322" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-Em-eXD">
+                                <rect key="frame" x="46" y="271" width="322" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BI5-Pr-LiL">
+                                <rect key="frame" x="132" y="424.5" width="151" height="153"/>
+                                <color key="tintColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="itY-52-Qc7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hallo Pflanzenliebhaber!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtV-D8-EjD">
+                                <rect key="frame" x="58" y="70" width="285" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="hbX-4o-5a1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YxG-p3-cQZ">
+                                <rect key="frame" x="117" y="424" width="180" height="155"/>
+                                <state key="normal" title="Profilbild hinzufügen">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImage:" destination="BSP-iV-hHR" eventType="touchUpInside" id="DMR-56-Wjf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU4-xS-6Pc">
+                                <rect key="frame" x="132" y="776" width="136" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Fertig">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishedButton:" destination="BSP-iV-hHR" eventType="touchUpInside" id="rvZ-DU-Loo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="PWt-SF-o35" firstAttribute="trailing" secondItem="ciO-Em-eXD" secondAttribute="trailing" id="3m4-JL-Lzg"/>
+                            <constraint firstItem="YxG-p3-cQZ" firstAttribute="leading" secondItem="xcA-t1-FZo" secondAttribute="leading" constant="117" id="4sP-5r-7Mj"/>
+                            <constraint firstItem="PWt-SF-o35" firstAttribute="leading" secondItem="xcA-t1-FZo" secondAttribute="leading" constant="46" id="98b-cE-tQF"/>
+                            <constraint firstItem="PtV-D8-EjD" firstAttribute="top" secondItem="xcA-t1-FZo" secondAttribute="top" constant="26" id="9by-qf-DMk"/>
+                            <constraint firstItem="xcA-t1-FZo" firstAttribute="trailing" secondItem="PtV-D8-EjD" secondAttribute="trailing" constant="71" id="AOK-kg-MG3"/>
+                            <constraint firstItem="ciO-Em-eXD" firstAttribute="centerX" secondItem="YxG-p3-cQZ" secondAttribute="centerX" id="QNr-ZQ-nER"/>
+                            <constraint firstItem="PtV-D8-EjD" firstAttribute="centerX" secondItem="iU4-xS-6Pc" secondAttribute="centerX" id="TE4-R9-0OB"/>
+                            <constraint firstItem="xcA-t1-FZo" firstAttribute="bottom" secondItem="iU4-xS-6Pc" secondAttribute="bottom" constant="47" id="Uxc-EX-dIr"/>
+                            <constraint firstItem="PWt-SF-o35" firstAttribute="top" secondItem="PtV-D8-EjD" secondAttribute="bottom" constant="33" id="VSz-sQ-STU"/>
+                            <constraint firstItem="ciO-Em-eXD" firstAttribute="top" secondItem="PWt-SF-o35" secondAttribute="bottom" constant="14" id="XsD-Mj-pOR"/>
+                            <constraint firstItem="YxG-p3-cQZ" firstAttribute="bottom" secondItem="BI5-Pr-LiL" secondAttribute="bottom" id="atN-Mj-YPK"/>
+                            <constraint firstItem="YxG-p3-cQZ" firstAttribute="top" secondItem="BI5-Pr-LiL" secondAttribute="top" id="cSM-Pa-bam"/>
+                            <constraint firstItem="PWt-SF-o35" firstAttribute="centerX" secondItem="E9R-vp-i8b" secondAttribute="centerX" id="cfW-v0-hBQ"/>
+                            <constraint firstItem="BI5-Pr-LiL" firstAttribute="centerX" secondItem="YxG-p3-cQZ" secondAttribute="centerX" id="fYT-Ml-Acf"/>
+                            <constraint firstItem="PWt-SF-o35" firstAttribute="leading" secondItem="ciO-Em-eXD" secondAttribute="leading" id="h1Y-Vo-6fd"/>
+                            <constraint firstItem="BI5-Pr-LiL" firstAttribute="leading" secondItem="iU4-xS-6Pc" secondAttribute="leading" id="hUi-yQ-RuU"/>
+                            <constraint firstItem="BI5-Pr-LiL" firstAttribute="leading" secondItem="xcA-t1-FZo" secondAttribute="leading" constant="132" id="iCm-Te-Sl2"/>
+                            <constraint firstItem="PtV-D8-EjD" firstAttribute="leading" secondItem="xcA-t1-FZo" secondAttribute="leading" constant="58" id="zJ2-rb-BGe"/>
+                            <constraint firstItem="YxG-p3-cQZ" firstAttribute="top" secondItem="E9R-vp-i8b" secondAttribute="top" constant="424" id="zxk-Gu-x0r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xcA-t1-FZo"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EnV-6O-b6p" appends="YES" id="ydU-4k-Yru"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="ciO-Em-eXD" id="1o0-4u-a4k"/>
+                        <outlet property="profilPicture" destination="BI5-Pr-LiL" id="5MF-da-bEQ"/>
+                        <segue destination="gx0-n2-XdW" kind="unwind" identifier="backSegue" unwindAction="popDid:" id="JOH-4n-aBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSW-PS-sMn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gx0-n2-XdW" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="EnV-6O-b6p">
+                    <connections>
+                        <action selector="tabGesture:" destination="BSP-iV-hHR" id="QMD-Dd-Smf"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="802.89855072463774" y="761.38392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="64" height="48"/>
+    </resources>
+</document>

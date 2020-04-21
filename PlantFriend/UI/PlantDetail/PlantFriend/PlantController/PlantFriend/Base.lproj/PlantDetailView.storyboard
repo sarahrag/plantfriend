@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w9c-5e-Qvr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Plant Detail View Controller-->
+        <scene sceneID="HCh-RK-FuY">
+            <objects>
+                <viewController id="w9c-5e-Qvr" customClass="PlantDetailViewController" customModule="PlantFriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6OC-u2-54k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlantDefaultColor" translatesAutoresizingMaskIntoConstraints="NO" id="Ece-EG-Ehb">
+                                <rect key="frame" x="42" y="111" width="162" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="060-Ht-v31"/>
+                                    <constraint firstAttribute="height" constant="182" id="gTQ-lW-wnx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WaterLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE2-xn-MDc">
+                                <rect key="frame" x="42" y="333" width="249" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gny-XD-aFM">
+                                <rect key="frame" x="333" y="325" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="VV6-Ow-xnZ"/>
+                                    <constraint firstAttribute="height" constant="36" id="y9x-RB-ilr"/>
+                                </constraints>
+                                <state key="normal" title="Watered" image="WaterIcon"/>
+                                <connections>
+                                    <action selector="watererButtonAction:" destination="w9c-5e-Qvr" eventType="touchUpInside" id="9ds-Y7-Tby"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-Yb-eTt">
+                                <rect key="frame" x="260" y="728" width="109" height="30"/>
+                                <state key="normal" title="Pflanze löschen">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deletePlantButton:" destination="w9c-5e-Qvr" eventType="touchUpInside" id="F8Z-PG-5bx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlantName" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABf-Uy-1zV" customClass="UIColorLabel" customModule="PlantFriend" customModuleProvider="target">
+                                <rect key="frame" x="20" y="61" width="374" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="k6X-mP-sNs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="upperCase" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.94117647059999998" green="0.95686274510000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="krG-uS-x1m" firstAttribute="bottom" secondItem="kNf-Yb-eTt" secondAttribute="bottom" constant="55" id="3sk-cG-uQb"/>
+                            <constraint firstItem="krG-uS-x1m" firstAttribute="trailing" secondItem="kNf-Yb-eTt" secondAttribute="trailing" constant="45" id="BXu-Xo-vBk"/>
+                            <constraint firstItem="krG-uS-x1m" firstAttribute="trailing" secondItem="ABf-Uy-1zV" secondAttribute="trailing" constant="20" id="CoQ-7O-lhT"/>
+                            <constraint firstItem="ABf-Uy-1zV" firstAttribute="leading" secondItem="Ece-EG-Ehb" secondAttribute="trailing" constant="-184" id="Gzn-Ip-w1W"/>
+                            <constraint firstItem="ABf-Uy-1zV" firstAttribute="centerX" secondItem="6OC-u2-54k" secondAttribute="centerX" id="Lzv-wH-YVK"/>
+                            <constraint firstItem="Ece-EG-Ehb" firstAttribute="leading" secondItem="krG-uS-x1m" secondAttribute="leading" constant="42" id="NwA-Bk-zN4"/>
+                            <constraint firstItem="gny-XD-aFM" firstAttribute="leading" secondItem="DE2-xn-MDc" secondAttribute="trailing" constant="42" id="YL9-St-Idk"/>
+                            <constraint firstItem="DE2-xn-MDc" firstAttribute="top" secondItem="Ece-EG-Ehb" secondAttribute="bottom" constant="40" id="eB1-Bu-Exu"/>
+                            <constraint firstItem="krG-uS-x1m" firstAttribute="trailing" secondItem="gny-XD-aFM" secondAttribute="trailing" constant="45" id="gki-gL-H7U"/>
+                            <constraint firstItem="gny-XD-aFM" firstAttribute="top" secondItem="krG-uS-x1m" secondAttribute="top" constant="281" id="kFD-cU-FsM"/>
+                            <constraint firstItem="Ece-EG-Ehb" firstAttribute="top" secondItem="ABf-Uy-1zV" secondAttribute="top" constant="50" id="mZy-c0-Qz4"/>
+                            <constraint firstItem="gny-XD-aFM" firstAttribute="centerY" secondItem="DE2-xn-MDc" secondAttribute="centerY" id="pbu-HO-xX7"/>
+                            <constraint firstItem="Ece-EG-Ehb" firstAttribute="leading" secondItem="DE2-xn-MDc" secondAttribute="leading" id="s8A-7E-jY3"/>
+                            <constraint firstItem="ABf-Uy-1zV" firstAttribute="top" secondItem="krG-uS-x1m" secondAttribute="top" constant="17" id="vwO-Ul-dju"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="krG-uS-x1m"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oZU-ez-a1r" appends="YES" id="sHY-V3-Em6"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Pe-H5-yQH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="plantImageView" destination="Ece-EG-Ehb" id="VuC-nb-BKR"/>
+                        <outlet property="plantNameLabel" destination="ABf-Uy-1zV" id="p4Z-yq-eU7"/>
+                        <outlet property="waterLabel" destination="DE2-xn-MDc" id="snn-5e-iUb"/>
+                        <outlet property="wateredButton" destination="gny-XD-aFM" id="3ej-Uj-TZ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKE-7u-skf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="oZU-ez-a1r">
+                    <connections>
+                        <action selector="screenEdgeGesture:" destination="w9c-5e-Qvr" id="C0H-LN-6K6"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1066.6666666666667" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlantDefaultColor" width="256" height="256"/>
+        <image name="WaterIcon" width="256" height="256"/>
+    </resources>
+</document>

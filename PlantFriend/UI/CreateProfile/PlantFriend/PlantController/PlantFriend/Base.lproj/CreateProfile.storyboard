@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="542-ke-MBd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Profile View Controller-->
+        <scene sceneID="KfE-xX-RNK">
+            <objects>
+                <viewController id="542-ke-MBd" customClass="CreateProfileViewController" customModule="PlantFriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dxr-xX-M2h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wie heißt du?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLk-fT-iz1">
+                                <rect key="frame" x="46" y="254" width="149" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-Pe-9SA">
+                                <rect key="frame" x="46" y="292" width="323" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Willkommen zurück!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEg-t0-A5Z">
+                                <rect key="frame" x="88" y="107" width="239" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="QJl-al-34j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Je7-S5-zsc">
+                                <rect key="frame" x="132" y="420.5" width="150" height="138"/>
+                                <color key="tintColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="CFq-ej-b30"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6n-ry-ZAm">
+                                <rect key="frame" x="132" y="776" width="150" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Fertig">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishedButton:" destination="542-ke-MBd" eventType="touchUpInside" id="V19-yP-zyd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3VT-Ek-EbO">
+                                <rect key="frame" x="117" y="415" width="180" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6ae-8F-bmF"/>
+                                </constraints>
+                                <state key="normal" title="Profilbild hinzufügen">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImage:" destination="542-ke-MBd" eventType="touchUpInside" id="lEC-uS-Xhu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="3VT-Ek-EbO" firstAttribute="centerY" secondItem="Je7-S5-zsc" secondAttribute="centerY" id="02I-uP-uHG"/>
+                            <constraint firstItem="m6n-ry-ZAm" firstAttribute="leading" secondItem="8FW-6C-CAq" secondAttribute="leading" constant="132" id="0cS-09-EMA"/>
+                            <constraint firstItem="aLk-fT-iz1" firstAttribute="leading" secondItem="lPA-Pe-9SA" secondAttribute="leading" id="4g1-MP-xE2"/>
+                            <constraint firstItem="3VT-Ek-EbO" firstAttribute="centerX" secondItem="Je7-S5-zsc" secondAttribute="centerX" id="8Pn-J3-67N"/>
+                            <constraint firstItem="SEg-t0-A5Z" firstAttribute="top" secondItem="8FW-6C-CAq" secondAttribute="top" constant="63" id="FQb-gm-mTI"/>
+                            <constraint firstItem="3VT-Ek-EbO" firstAttribute="top" secondItem="lPA-Pe-9SA" secondAttribute="bottom" constant="85" id="RY6-kL-yqJ"/>
+                            <constraint firstItem="SEg-t0-A5Z" firstAttribute="centerX" secondItem="Dxr-xX-M2h" secondAttribute="centerX" id="U6W-cO-Jv5"/>
+                            <constraint firstItem="SEg-t0-A5Z" firstAttribute="leading" secondItem="8FW-6C-CAq" secondAttribute="leading" constant="88" id="UoS-Sv-JVA"/>
+                            <constraint firstItem="3VT-Ek-EbO" firstAttribute="leading" secondItem="8FW-6C-CAq" secondAttribute="leading" constant="117" id="YX9-9B-lu4"/>
+                            <constraint firstItem="Je7-S5-zsc" firstAttribute="centerX" secondItem="m6n-ry-ZAm" secondAttribute="centerX" id="Z5C-ak-GvS"/>
+                            <constraint firstItem="lPA-Pe-9SA" firstAttribute="top" secondItem="aLk-fT-iz1" secondAttribute="bottom" constant="8" id="ZR0-w3-r6O"/>
+                            <constraint firstItem="lPA-Pe-9SA" firstAttribute="centerX" secondItem="Je7-S5-zsc" secondAttribute="centerX" id="hpb-Y2-trW"/>
+                            <constraint firstItem="Je7-S5-zsc" firstAttribute="leading" secondItem="8FW-6C-CAq" secondAttribute="leading" constant="132" id="jEe-za-2aa"/>
+                            <constraint firstItem="aLk-fT-iz1" firstAttribute="top" secondItem="SEg-t0-A5Z" secondAttribute="bottom" constant="23" id="lEd-ah-dDu"/>
+                            <constraint firstItem="aLk-fT-iz1" firstAttribute="leading" secondItem="8FW-6C-CAq" secondAttribute="leading" constant="46" id="oYx-4E-xSM"/>
+                            <constraint firstItem="SEg-t0-A5Z" firstAttribute="centerX" secondItem="lPA-Pe-9SA" secondAttribute="centerX" id="w7d-OC-hcb"/>
+                            <constraint firstItem="8FW-6C-CAq" firstAttribute="bottom" secondItem="m6n-ry-ZAm" secondAttribute="bottom" constant="47" id="wQw-j7-v3a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8FW-6C-CAq"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EOv-wm-4VO" appends="YES" id="nZE-pr-2RZ"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="bzn-i4-Yni"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="lPA-Pe-9SA" id="OxT-Em-gmQ"/>
+                        <outlet property="profilPicture" destination="Je7-S5-zsc" id="TQg-cp-ZZv"/>
+                        <segue destination="DOP-js-hGn" kind="unwind" identifier="backSegue" unwindAction="popDid:" id="izk-lC-oMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="021-Pa-SCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="DOP-js-hGn" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="EOv-wm-4VO">
+                    <connections>
+                        <action selector="tabGesture:" destination="542-ke-MBd" id="4Hs-5n-jC5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="734.78260869565224" y="853.79464285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="64" height="48"/>
+    </resources>
+</document>

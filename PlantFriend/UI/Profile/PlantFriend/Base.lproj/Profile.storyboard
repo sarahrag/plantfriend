@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wPI-GC-45I">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dein Profil 🌿-->
+        <scene sceneID="aWq-Uc-SqG">
+            <objects>
+                <viewController id="3Le-Oh-t63" customClass="ProfileViewController" customModule="PlantFriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="032-L8-hfm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhm-ho-uT4">
+                                <rect key="frame" x="36" y="108" width="176.66666666666666" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="upperCase" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meine Pflanzen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZiS-Mu-5W2">
+                                <rect key="frame" x="71.999999999999986" y="325" width="130.66666666666663" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-2f-sYQ">
+                                <rect key="frame" x="16" y="373" width="382" height="440"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="apW-Yh-ScK">
+                                    <size key="itemSize" width="102" height="124"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="plantCell" id="ykB-Z4-YNQ" customClass="UIPlantsCollectionViewCell" customModule="PlantFriend" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2Zf-NT-aep">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5De-QO-5Gc">
+                                                    <rect key="frame" x="0.0" y="105" width="103" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlantDefaultColor" translatesAutoresizingMaskIntoConstraints="NO" id="oNy-N0-6Ok">
+                                                    <rect key="frame" x="10" y="0.0" width="84" height="105"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="102" height="124"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="5De-QO-5Gc" id="DqC-Ry-iRM"/>
+                                            <outlet property="plantImageView" destination="oNy-N0-6Ok" id="goK-t1-keY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0be-wB-32b">
+                                <rect key="frame" x="307" y="150" width="93" height="30"/>
+                                <state key="normal" title="Profil löschen">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteProfile:" destination="3Le-Oh-t63" eventType="touchUpInside" id="zJJ-GM-1Sm"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="v8k-Pc-0sZ">
+                                <rect key="frame" x="26" y="146" width="176.66666666666666" height="156.66666666666669"/>
+                                <color key="tintColor" red="0.94117647058823528" green="0.95686274509803915" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="yez-xc-rDA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7QV-zt-4ws">
+                                <rect key="frame" x="15" y="423" width="384" height="193"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.3294117647" green="0.5450980392" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="noPlantsButtonAction:" destination="3Le-Oh-t63" eventType="touchUpInside" id="I1U-Dh-jHw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uTj-CS-x4a">
+                                <rect key="frame" x="258" y="188" width="147" height="30"/>
+                                <state key="normal" title="Alle Pflanzen löschen">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deletePlants:" destination="3Le-Oh-t63" eventType="touchUpInside" id="KGu-8J-Ete"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Ys2-af-CeY" firstAttribute="trailing" secondItem="pqH-2f-sYQ" secondAttribute="trailing" constant="16" id="9h4-a6-bwp"/>
+                            <constraint firstItem="qhm-ho-uT4" firstAttribute="leading" secondItem="Ys2-af-CeY" secondAttribute="leading" constant="36" id="CQP-fn-8Ht"/>
+                            <constraint firstItem="Ys2-af-CeY" firstAttribute="trailing" secondItem="0be-wB-32b" secondAttribute="trailing" constant="14" id="Ev5-ig-vKf"/>
+                            <constraint firstItem="0be-wB-32b" firstAttribute="top" secondItem="Ys2-af-CeY" secondAttribute="top" constant="62" id="EyV-Pf-NNd"/>
+                            <constraint firstItem="ZiS-Mu-5W2" firstAttribute="trailing" secondItem="v8k-Pc-0sZ" secondAttribute="trailing" id="I83-Cr-73z"/>
+                            <constraint firstItem="pqH-2f-sYQ" firstAttribute="bottom" secondItem="Ys2-af-CeY" secondAttribute="bottom" id="Jnn-Jt-K5Z"/>
+                            <constraint firstItem="ZiS-Mu-5W2" firstAttribute="top" secondItem="v8k-Pc-0sZ" secondAttribute="bottom" constant="21" id="L5h-mH-NTA"/>
+                            <constraint firstItem="Ys2-af-CeY" firstAttribute="trailing" secondItem="uTj-CS-x4a" secondAttribute="trailing" constant="9" id="ME0-Bf-epF"/>
+                            <constraint firstItem="Ys2-af-CeY" firstAttribute="bottom" secondItem="7QV-zt-4ws" secondAttribute="bottom" constant="197" id="Oxx-sa-Tqc"/>
+                            <constraint firstItem="uTj-CS-x4a" firstAttribute="top" secondItem="0be-wB-32b" secondAttribute="bottom" constant="8" id="UEh-Vh-Fuu"/>
+                            <constraint firstItem="7QV-zt-4ws" firstAttribute="centerX" secondItem="Ys2-af-CeY" secondAttribute="centerX" id="ZFx-yL-f1W"/>
+                            <constraint firstItem="qhm-ho-uT4" firstAttribute="width" secondItem="032-L8-hfm" secondAttribute="width" multiplier="0.426667" id="akT-6R-6qj"/>
+                            <constraint firstItem="7QV-zt-4ws" firstAttribute="leading" secondItem="Ys2-af-CeY" secondAttribute="leading" constant="15" id="er2-pk-Mu9"/>
+                            <constraint firstItem="7QV-zt-4ws" firstAttribute="top" secondItem="ZiS-Mu-5W2" secondAttribute="bottom" constant="75" id="fvn-mb-aMv"/>
+                            <constraint firstItem="v8k-Pc-0sZ" firstAttribute="leading" secondItem="Ys2-af-CeY" secondAttribute="leading" constant="26" id="hED-cN-a1O"/>
+                            <constraint firstItem="pqH-2f-sYQ" firstAttribute="leading" secondItem="Ys2-af-CeY" secondAttribute="leading" constant="16" id="pnp-0j-6EK"/>
+                            <constraint firstItem="v8k-Pc-0sZ" firstAttribute="trailing" secondItem="qhm-ho-uT4" secondAttribute="trailing" constant="-10" id="rla-Ao-Cw3"/>
+                            <constraint firstItem="qhm-ho-uT4" firstAttribute="top" secondItem="Ys2-af-CeY" secondAttribute="top" constant="20" id="s9M-QM-Rlk"/>
+                            <constraint firstItem="v8k-Pc-0sZ" firstAttribute="top" secondItem="qhm-ho-uT4" secondAttribute="bottom" constant="8" id="sEY-pY-iXf"/>
+                            <constraint firstItem="uTj-CS-x4a" firstAttribute="trailing" secondItem="0be-wB-32b" secondAttribute="trailing" constant="5" id="veJ-wR-DoZ"/>
+                            <constraint firstItem="pqH-2f-sYQ" firstAttribute="top" secondItem="ZiS-Mu-5W2" secondAttribute="bottom" constant="25" id="zi0-lb-lpF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ys2-af-CeY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="UserIconBlack" selectedImage="UserIconBlack" id="PgZ-AE-XKZ">
+                        <inset key="imageInsets" minX="0.0" minY="115" maxX="0.0" maxY="106"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="14"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Dein Profil 🌿" largeTitleDisplayMode="always" id="5wW-GG-5e3"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="deletePlantsButton" destination="uTj-CS-x4a" id="oDH-8b-rbB"/>
+                        <outlet property="nameLabel" destination="qhm-ho-uT4" id="ObG-MF-aa4"/>
+                        <outlet property="noPlantsButton" destination="7QV-zt-4ws" id="dDG-1m-3AJ"/>
+                        <outlet property="plantCollectionView" destination="pqH-2f-sYQ" id="EtL-JE-xSo"/>
+                        <outlet property="plantLabel" destination="ZiS-Mu-5W2" id="JDw-df-hnq"/>
+                        <outlet property="profilePicture" destination="v8k-Pc-0sZ" id="g4O-mz-psN"/>
+                        <segue destination="aSf-rF-Tsa" kind="show" identifier="plantDetailSegue" id="LnZ-CG-LNy"/>
+                        <segue destination="rjK-ig-hC6" kind="show" identifier="createProfile" id="NWF-NO-8U1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smf-Eq-y56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-379.71014492753625" y="-730.58035714285711"/>
+        </scene>
+        <!--PlantDetailView-->
+        <scene sceneID="gwx-Aq-hL1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlantDetailView" id="aSf-rF-Tsa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1DO-Dq-xgi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvy-wi-bMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504" y="-847"/>
+        </scene>
+        <!--CreateProfile-->
+        <scene sceneID="Fte-Zp-bwy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateProfile" id="rjK-ig-hC6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZPA-0I-ZfS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qu8-uH-E3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="-719"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1zY-l5-3Us">
+            <objects>
+                <navigationController id="wPI-GC-45I" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b9j-7p-KBu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Le-Oh-t63" kind="relationship" relationship="rootViewController" id="2vR-Wk-htL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51z-kP-QwS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1288" y="-711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlantDefaultColor" width="256" height="256"/>
+        <image name="UserIconBlack" width="256" height="256"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
